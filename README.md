@@ -16,7 +16,8 @@ A simple tutorial on how to deploy python application in docker
     source .venv/bin/activate
     ```
 * Install requirements
-    ```
+
+``` bash
   pip install -r requirements.txt
   ```
 
@@ -46,3 +47,35 @@ Using pipreqs is smart because it scans the .py files in the project and generat
 based only on the packages used. Prefer using this method over of pip freeze to avoid to list unnecessary or conflicting
 requirements
 
+# Test
+
+```bash
+python3 -m flask run
+```
+
+# Build
+
+* Create dockerfile
+* build image
+
+```bash
+  docker build --tag python-docker .
+  ```
+
+* view local images
+
+  ```bash
+  docker images
+  ```
+
+# Run
+
+Expose the docker to the 8000 port for incoming requests
+
+```bash
+docker run --publish 8000:5000 python-docker
+```
+
+# CICD
+
+# Deploy
