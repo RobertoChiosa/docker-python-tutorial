@@ -89,23 +89,36 @@ Supposing that you built your application and now it is time to deploy it throug
   * 
 * Build the image
 
-```bash
+  ```bash
   docker build --tag python-docker .
   ```
 
-* view local images
+* View local images and check if you find the `python-docker`
 
   ```bash
   docker images
   ```
-
+  You should see something like this
+  ```txt
+  REPOSITORY      TAG       IMAGE ID       CREATED          SIZE
+  python-docker   latest    7a3b8d8d4a6c   16 seconds ago   1.01GB
+  ```
+  
 ## Run
 
-Expose the docker to the 8000 port for incoming requests
+* Run the container by exposing the port 5000 to the 8000 port of the host machine. In this way the created API will  be reachable from the localhost. Remember to give a name to the containers otherwise they will always have a random name and may be difficult to find.
+  ```bash
+  docker run --publish 8000:5000 --name flask-api-python python-docker 
+  ```
 
-```bash
-docker run --publish 8000:5000 python-docker
-```
+* You can test the reachability of the container by executing a request
+  ```bash
+  curl http://localhost:8000
+  ```
+* While a container is running you can list them with the following command
+  ```bash
+  docker ps
+  ```
 
 ## CICD
 
