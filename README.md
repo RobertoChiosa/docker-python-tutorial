@@ -1,14 +1,14 @@
-# docker-python-tutorial
+# Build python apps with docker
 
 A simple tutorial on how to deploy python application in docker
-used as template repository inspired to https://docs.docker.com/language/python/build-images/
+used as template repository inspired from https://docs.docker.com/language/python/build-images/
 
 ## Setup
 
 * Clone this repository
 
   ```bash
-  git clone
+  git clone https://github.com/RobertoChiosa/docker-python-tutorial.git
   ```
 
 * Open a terminal in the repository folder
