@@ -76,17 +76,17 @@ Press CTRL+C to quit
 ## Build
 Supposing that you built your application and now it is time to deploy it through docker.
 
-* Create dockerfile in the root directory
+* Create a [`Dockerfile`](./Dockerfile) in the root directory
   ```bash
   touch Dockerfile
   ```
-  Inside the Dockerfile make sure to 
-  * List the official python image you will use
-  * Create a folder inside the contner that will be used as working directory for the app
-  * Copy requirements in the working directory and install required packages
-  * Copy the source code in the docker container
-  * Tell the image what to do when it starts as a container
-  * 
+  Inside the `Dockerfile` make sure to:
+  * List the official python image you will use;
+  * Create a folder inside the contner that will be used as working directory for the app;
+  * Copy requirements in the working directory and install required packages;
+  * Copy the source code in the docker container;
+  * Tell the image what to do when it starts as a container;
+
 * Build the image
 
   ```bash
