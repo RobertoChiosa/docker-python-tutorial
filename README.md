@@ -119,7 +119,6 @@ Supposing that you built your application and now it is time to deploy it throug
   ```bash
   docker ps
   ```
-
-## CICD
-
+  
 ## Deploy
+
